@@ -4,7 +4,7 @@ import '../../domain/entity/params_search_cep.dart';
 import '../../domain/errors/errors.dart';
 import '../../domain/usecases/search_cep_usecase.dart';
 
-class SearchCepStore extends StreamStore<SearchCepException, String> {
+class SearchCepStore extends NotifierStore<SearchCepException, String> {
   final SearchCepUsecase usecase;
   SearchCepStore(this.usecase) : super("");
 
