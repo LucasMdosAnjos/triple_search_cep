@@ -2,6 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:triple_search_cep/app/modules/home/domain/usecases/search_cep_usecase.dart';
 import 'package:triple_search_cep/app/modules/home/external/http/http_search_cep.dart';
 import 'package:triple_search_cep/app/modules/home/infra/repositories/search_cep_repository_impl.dart';
+import 'package:triple_search_cep/app/modules/home/presenter/blocs/search_cep_bloc/search_cep_bloc.dart';
 import 'package:triple_search_cep/app/modules/home/presenter/stores/search_cep_store.dart';
 import 'package:triple_search_cep/app/modules/home/presenter/widgets/home.dart';
 
@@ -12,8 +13,11 @@ class HomeModule extends Module {
     Bind.lazySingleton((i) => SearchCepRepositoryImpl(i())),
     Bind.lazySingleton((i) => SearchCepUsecase(i())),
 
-    //store
+    //store triple
     Bind.lazySingleton((i) => SearchCepStore(i())),
+
+    //blocs
+    Bind.lazySingleton((i) => SearchCepBloc(i()))
   ];
 
   @override

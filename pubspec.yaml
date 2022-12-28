@@ -40,6 +40,8 @@ dependencies:
   flutter_triple: ^1.2.8-dev.1
   dartz: ^0.10.1
   http: ^0.13.5
+  bloc: ^8.1.0
+  flutter_bloc: ^8.1.1
 
 dev_dependencies:
   flutter_test:
